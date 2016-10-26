@@ -22,7 +22,7 @@ namespace Oasis.Infrastructure
 
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
-            filterContext.Result = new RedirectResult("[Url]");
+            filterContext.Result = new RedirectResult("Account/Index");
         }
     }
 }

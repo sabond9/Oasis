@@ -161,6 +161,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AuthenticationManager.cs" />
     <Compile Include="Infrastructure\CustomAuthorizeAttribute.cs" />
     <Compile Include="Infrastructure\UserCookieData.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
@@ -212,6 +213,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Oasis.Business\Oasis.Business.csproj">
+      <Project>{614F6EC1-2B9D-49F6-8B58-A26361C7B940}</Project>
+      <Name>Oasis.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Oasis.Common\Oasis.Common.csproj">
       <Project>{B90015E3-D600-4785-B8A2-E01AC7F3318D}</Project>
       <Name>Oasis.Common</Name>

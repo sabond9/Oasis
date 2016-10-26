@@ -3,14 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <h4>User Login</h4>
         <hr />
-        @Html.ValidationSummary(true)
 
         <div class="form-group">
             @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
@@ -23,7 +22,6 @@
             @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password)
-                @Html.ValidationMessageFor(model => model.Password)
             </div>
         </div>
 

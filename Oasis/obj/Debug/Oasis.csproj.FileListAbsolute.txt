@@ -120,3 +120,7 @@ E:\Projects\Oasis\Oasis\obj\Debug\Oasis.dll
 E:\Projects\Oasis\Oasis\obj\Debug\Oasis.pdb
 E:\Projects\Oasis\Oasis\bin\Oasis.Common.dll
 E:\Projects\Oasis\Oasis\bin\Oasis.Common.pdb
+D:\Projects\Oasis\Oasis\bin\Oasis.Business.dll
+D:\Projects\Oasis\Oasis\bin\Oasis.Common.dll
+D:\Projects\Oasis\Oasis\bin\Oasis.Business.pdb
+D:\Projects\Oasis\Oasis\bin\Oasis.Common.pdb

@@ -1,6 +1,6 @@
 ﻿using System.Web.Helpers;
 
-namespace Oasis.Infrastructure
+namespace Oasis.Common
 {
     public class HashPasswordHelper
     {

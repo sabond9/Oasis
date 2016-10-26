@@ -162,7 +162,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CustomAuthorizeAttribute.cs" />
-    <Compile Include="Infrastructure\HashPasswordHelper.cs" />
     <Compile Include="Infrastructure\UserCookieData.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

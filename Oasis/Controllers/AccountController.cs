@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Newtonsoft.Json;
+using Oasis.Common;
 using Oasis.DataAccess;
 using Oasis.DataAccess.Contracts;
 using Oasis.DataModel;
@@ -28,13 +29,6 @@ namespace Oasis.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel loginViewModel, string returnUrl = "")
         {
-            IUnitOfWork unitOfWork = new UnitOfWork(new OasisContext());
-            var user = unitOfWork.GetBaseRepository<User>()
-                .GetAll(r => r.UserRoles,
-                        r => r.UserRoles.Select(ur => ur.Role),
-                        r => r.UserRoles.Select(ur => ur.Role.PermissionRoles))
-                .SingleOrDefault(r => r.UserName == loginViewModel.UserName);
-
             if (user != null)
             {
                 if (!HashPasswordHelper.VerifyHashedPassword(user.PasswordHash, loginViewModel.Password))

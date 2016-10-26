@@ -1,0 +1,9 @@
+E:\Projects\Oasis\Oasis.Common\bin\Debug\Oasis.Common.dll
+E:\Projects\Oasis\Oasis.Common\bin\Debug\Oasis.Common.pdb
+E:\Projects\Oasis\Oasis.Common\bin\Debug\Oasis.DataModel.dll
+E:\Projects\Oasis\Oasis.Common\bin\Debug\EntityFramework.dll
+E:\Projects\Oasis\Oasis.Common\bin\Debug\Oasis.DataModel.pdb
+E:\Projects\Oasis\Oasis.Common\bin\Debug\EntityFramework.xml
+E:\Projects\Oasis\Oasis.Common\obj\Debug\Oasis.Common.csprojResolveAssemblyReference.cache
+E:\Projects\Oasis\Oasis.Common\obj\Debug\Oasis.Common.dll
+E:\Projects\Oasis\Oasis.Common\obj\Debug\Oasis.Common.pdb

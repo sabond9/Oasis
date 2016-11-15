@@ -62,5 +62,10 @@ namespace Oasis.DataAccess.Contracts
         {
             _dbContext.Set<TEntity>().RemoveRange(entities);
         }
+
+        public bool IsExist(TEntity entity)
+        {
+            return _dbContext.Set<TEntity>().Any(e => e == entity);
+        }
     }
 }

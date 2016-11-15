@@ -28,13 +28,13 @@ namespace Oasis.Common
             }
         }
 
+        public static bool IsUserAuthenticated => ClaimsIdentity.IsAuthenticated;
+
         public static string UserName
         {
             get
             {
-                if (ClaimsIdentity == null) return null;
-
-                var userNameClaim = ClaimsIdentity.FindFirst(cl => cl.Type == ClaimType.Name);
+                var userNameClaim = ClaimsIdentity?.FindFirst(cl => cl.Type == ClaimType.Name);
 
                 return userNameClaim?.Value;
             }

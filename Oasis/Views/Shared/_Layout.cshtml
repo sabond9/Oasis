@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Oasis.Common
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,7 +24,20 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Change password", "UserPassword", "Account")</li>
+                    }
                 </ul>
+                @if (Request.IsAuthenticated)
+                {
+                    <div style="color: white">
+                        Hello <label>@AppSecurityContext.UserName</label>
+                    </div>
+                    <div style="color: white">
+                        @Html.ActionLink("LogOut", "LogOut", "Account")
+                    </div>
+                }
             </div>
         </div>
     </div>

@@ -17,36 +17,36 @@ namespace Oasis.DataModel.Migrations
 
         protected override void Seed(Oasis.DataModel.OasisContext context)
         {
-            var user = new User
-            {
-                UserName = "Admin",
-                PasswordHash = Crypto.HashPassword("12345")
-            };
-            context.Users.Add(user);
+            //var user = new User
+            //{
+            //    UserName = "Admin",
+            //    PasswordHash = Crypto.HashPassword("12345")
+            //};
+            //context.Users.Add(user);
 
-            var permission = new Permission
-            {
-                Name = "AdminPermission"
-            };
+            //var permission = new Permission
+            //{
+            //    Name = "AdminPermission"
+            //};
 
-            context.Permissions.Add(permission);
+            //context.Permissions.Add(permission);
 
-            var role = new Role
-            {
-                Name = "Admin"
-            };
-            context.Roles.Add(role);
+            //var role = new Role
+            //{
+            //    Name = "Admin"
+            //};
+            //context.Roles.Add(role);
 
-            var permissionRole = new PermissionRole
-            {
-                Permission = permission,
-                Role = role
-            };
+            //var permissionRole = new PermissionRole
+            //{
+            //    Permission = permission,
+            //    Role = role
+            //};
 
-            context.PermissionRoles.Add(permissionRole);
+            //context.PermissionRoles.Add(permissionRole);
 
-            permission.PermissionRoles.Add(permissionRole);
-            role.PermissionRoles.Add(permissionRole);
+            //permission.PermissionRoles.Add(permissionRole);
+            //role.PermissionRoles.Add(permissionRole);
 
         }
     }

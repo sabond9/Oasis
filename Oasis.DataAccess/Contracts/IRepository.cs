@@ -24,5 +24,7 @@ namespace Oasis.DataAccess.Contracts
         void Remove(TEntity entity);
 
         void RemoveRange(IEnumerable<TEntity> entities);
+
+        bool IsExist(TEntity entity);
     }
 }

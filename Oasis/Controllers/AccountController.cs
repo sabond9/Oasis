@@ -20,10 +20,12 @@ namespace Oasis.Controllers
     {
         private readonly UserManager _userManager;
         private readonly AuthenticationManager _authenticationManager;
+        private readonly AcccountManager _accountManager;
 
         public AccountController()
         {
             _userManager = new UserManager();
+            _accountManager = new AcccountManager();
             _authenticationManager = new AuthenticationManager();
         }
 
@@ -46,6 +48,49 @@ namespace Oasis.Controllers
             }
 
             _authenticationManager.Authenticate(loginViewModel.UserName);
+            return RedirectToAction("Index", "Home");
+        }
+
+        [AllowAnonymous]
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Account");
+        }
+
+        [AllowAnonymous]
+        public ActionResult UserPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult ChangePassword(ChangeUserPasswordViewModel changeUserPasswordViewModel)
+        {
+            if (!ModelState.IsValid) 
+            {
+                return View("UserPassword", changeUserPasswordViewModel);
+            }
+
+            var userId = AppSecurityContext.UserId;
+            if (!_accountManager.CheckOldPassword(changeUserPasswordViewModel.OldPassword, userId.Value))
+            {
+                throw new Exception("Wrong old password");
+            }
+
+            if (!_accountManager.IsPasswordNew(changeUserPasswordViewModel.NewPassword, userId.Value))
+            {
+                throw new Exception("Please create another password. Such password existed");
+            }
+
+            if (!string.Equals(changeUserPasswordViewModel.NewPassword, changeUserPasswordViewModel.ConfirmNewPassword))
+            {
+                throw new Exception("Passwords are different");
+            }
+
+            _accountManager.SaveUserPassword(changeUserPasswordViewModel.NewPassword, userId.Value);
+
             return RedirectToAction("Index", "Home");
         }
     }

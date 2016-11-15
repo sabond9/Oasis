@@ -73,16 +73,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\PermisssionEntityConfiguration.cs" />
+    <Compile Include="Configurations\RoleEntityConfiguration.cs" />
+    <Compile Include="Configurations\UserEntityConfiguration.cs" />
+    <Compile Include="Configurations\UserPasswordEntityConfiguration.cs" />
     <Compile Include="Enums\Permissions.cs" />
     <Compile Include="Migrations\201610262049457_CreateDb.cs" />
     <Compile Include="Migrations\201610262049457_CreateDb.Designer.cs">
       <DependentUpon>201610262049457_CreateDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290818555_addUserPassword.cs" />
+    <Compile Include="Migrations\201610290818555_addUserPassword.Designer.cs">
+      <DependentUpon>201610290818555_addUserPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Permission.cs" />
     <Compile Include="Model\PermissionRole.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserPassword.cs" />
     <Compile Include="Model\UserRole.cs" />
     <Compile Include="OasisContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610262049457_CreateDb.resx">
       <DependentUpon>201610262049457_CreateDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290818555_addUserPassword.resx">
+      <DependentUpon>201610290818555_addUserPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

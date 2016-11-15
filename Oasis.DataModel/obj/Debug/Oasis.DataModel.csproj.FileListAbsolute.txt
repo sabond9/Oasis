@@ -35,3 +35,4 @@ D:\Projects\Oasis\Oasis.DataModel\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Projects\Oasis\Oasis.DataModel\bin\Debug\System.Web.WebPages.Razor.xml
 D:\Projects\Oasis\Oasis.DataModel\obj\Debug\Oasis.DataModel.Migrations.CreateDb.resources
 D:\Projects\Oasis\Oasis.DataModel\obj\Debug\Oasis.DataModel.csproj.GenerateResource.Cache
+D:\Projects\Oasis\Oasis.DataModel\obj\Debug\Oasis.DataModel.Migrations.addUserPassword.resources

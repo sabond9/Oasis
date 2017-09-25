@@ -14,7 +14,7 @@ namespace Oasis.Infrastructure
     {
         public void Authenticate(string userName)
         {
-            var s = "";
+            var s1 = "";
             var unitOfWork = new UnitOfWork(new OasisContext());
             var user = unitOfWork.GetBaseRepository<User>().GetAll
                 (

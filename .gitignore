@@ -48,3 +48,6 @@ Temporary Items
 *.cache
 *.suo
 *.ide
+*.dll
+*.pdb
+*.txt
